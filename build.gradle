@@ -4,6 +4,9 @@ buildscript {
     }
     repositories {
         mavenCentral()
+        flatDir { 
+          dirs 'lib' 
+        } 
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -23,8 +26,13 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    mainClassName = 'com.hinkmond.demo.DemoApplication'
+}
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.springframework/spring-web
+    compile group: 'org.springframework', name: 'spring-web'
     compile('org.springframework.boot:spring-boot-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
