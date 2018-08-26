@@ -13,7 +13,7 @@ public class GreetingApplication extends SpringBootServletInitializer {
         return application.sources(GreetingApplication.class);
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         SpringApplication.run(GreetingApplication.class, args);
     }
 

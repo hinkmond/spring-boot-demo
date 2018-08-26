@@ -2,15 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example</groupId>
+    <groupId>com.hinkmond</groupId>
     <artifactId>myproject</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>
         <start-class>com.hinkmond.hello.GreetingApplication</start-class>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <parent>
@@ -29,5 +27,8 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    <build>
+      <finalName>myproject</finalName>
+    </build>
 </project>
 
